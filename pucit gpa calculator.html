@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Pu-gpa-calculator.css">
+    
+    <!-- Title -->
+    <title>PUCIT Lahore GPA Calculator</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Use the  PUCIT GPA Calculator to easily compute your Grade Point Average based on the university's grading system. Simple, accurate, and designed for PUCIT students.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="PUCIT, GPA, calculator, university, Lahore, grade point average , GPA calculator, PUCIT Lahore GPA, PUCIT Lahore, GPA calculation, university GPA calculator, PUCIT grades, GPA formula, GPA score calculator, PUCIT academic results, PUCIT GPA scale, calculate GPA PUCIT, GPA calculator Pakistan, PUCIT student resources, GPA calculation tool, PUCIT Lahore grades calculator, GPA scale Lahore, PUCIT grade points, university GPA, GPA results, calculate university GPA, PUCIT academic performance, GPA calculator tool.">
+
+    <!-- Meta Author -->
+    <meta name="author" content="Your Name or Organization">
+
+    <!-- Open Graph Meta Tags (For social media sharing) -->
+    <meta property="og:title" content="PUCIT Lahore GPA Calculator – Calculate Your GPA">
+    <meta property="og:description" content="A simple and accurate GPA calculator for PUCIT Lahore students based on the university's grading system.">
+    <meta property="og:url" content="https://expandorbit.com/pucit-gpa-calculator.html">
+    <meta property="og:image" content="https://i.postimg.cc/d0MzJ9C2/a-logo-for-expandorbit-com-with-a-simple-u-ZN-Fh-Kf-Sbe-U5-I1-Bf-DLV-w-gy-QWXv0u-TKWTH2a7-Kx1-C5-XQ.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PUCIT Lahore GPA Calculator – Calculate Your GPA">
+    <meta name="twitter:description" content="A simple and accurate GPA calculator for PUCIT Lahore students.">
+    <meta name="twitter:image" content="https://i.postimg.cc/d0MzJ9C2/a-logo-for-expandorbit-com-with-a-simple-u-ZN-Fh-Kf-Sbe-U5-I1-Bf-DLV-w-gy-QWXv0u-TKWTH2a7-Kx1-C5-XQ.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/d0MzJ9C2/a-logo-for-expandorbit-com-with-a-simple-u-ZN-Fh-Kf-Sbe-U5-I1-Bf-DLV-w-gy-QWXv0u-TKWTH2a7-Kx1-C5-XQ.jpg" type="image/png">
+
+
+</head>
+<body>
+    <h2>PUCIT University Lahore</h2>
+    <img src="https://i.postimg.cc/L4vgcCP1/R.png" alt="PUCIT University Logo , gpa calculator , pucit gpa calculator" style="max-width: 200px; margin-bottom: 20px;">
+    <h1>GPA Calculator</h1>
+
+    <div class="calculator">
+        <div id="subjects-container">
+            <!-- Default 6 Subjects -->
+        </div>
+        <button class="btn" onclick="addSubject()">Add Subject</button>
+        <button class="btn" onclick="calculateGPA()">Calculate GPA</button>
+        <div id="result" class="result"></div>
+        <table id="grade-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Marks</th>
+                    <th>Letter Grade</th>
+                    <th>Grade Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>85 & Above</td><td>A</td><td>4.00</td></tr>
+                <tr><td>80-84</td><td>A-</td><td>3.70</td></tr>
+                <tr><td>75-79</td><td>B+</td><td>3.30</td></tr>
+                <tr><td>70-74</td><td>B</td><td>3.00</td></tr>
+                <tr><td>65-69</td><td>B-</td><td>2.70</td></tr>
+                <tr><td>61-64</td><td>C+</td><td>2.30</td></tr>
+                <tr><td>58-60</td><td>C</td><td>2.00</td></tr>
+                <tr><td>55-57</td><td>C-</td><td>1.70</td></tr>
+                <tr><td>50-54</td><td>D</td><td>1.00</td></tr>
+                <tr><td>Below 50</td><td>F</td><td>0.00</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="info">
+        <h2>How GPA is Calculated</h2>
+        <p>To calculate your GPA, you need to provide the subject name, credit hours, and grade points achieved. The GPA is calculated using the formula:</p>
+        <p><strong>GPA = (Total Grade Points Earned) / (Total Credit Hours)</strong></p>
+
+        <h3>Examples:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Credit Hours</th>
+                    <th>Grade Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Mathematics</td><td>3</td><td>4.00</td></tr>
+                <tr><td>Physics</td><td>4</td><td>3.70</td></tr>
+                <tr><td>Chemistry</td><td>2</td><td>3.30</td></tr>
+            </tbody>
+        </table>
+        <p>Total Grade Points = (3x4.00) + (4x3.70) + (2x3.30) = 33.10</p>
+        <p>Total Credit Hours = 3 + 4 + 2 = 9</p>
+        <p><strong>GPA = 33.10 / 9 = 3.68</strong></p>
+
+        <h3>Grade Distribution:</h3>
+        <p>The following table explains the grade distribution:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marks</th>
+                    <th>Letter Grade</th>
+                    <th>Grade Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>85 & Above</td><td>A</td><td>4.00</td></tr>
+                <tr><td>80-84</td><td>A-</td><td>3.70</td></tr>
+                <tr><td>75-79</td><td>B+</td><td>3.30</td></tr>
+                <tr><td>70-74</td><td>B</td><td>3.00</td></tr>
+                <tr><td>65-69</td><td>B-</td><td>2.70</td></tr>
+                <tr><td>61-64</td><td>C+</td><td>2.30</td></tr>
+                <tr><td>58-60</td><td>C</td><td>2.00</td></tr>
+                <tr><td>55-57</td><td>C-</td><td>1.70</td></tr>
+                <tr><td>50-54</td><td>D</td><td>1.00</td></tr>
+                <tr><td>Below 50</td><td>F</td><td>0.00</td></tr>
+            </tbody>
+        </table>
+    </div>
+  <div >
+        <h1>About PUCIT Lahore</h1>
+        <p>
+           <strong> Punjab University College of Information Technology (PUCIT)</strong> is one of the leading institutions in Pakistan, offering a wide range of programs in the fields of Information Technology, Computer Science, and Engineering. Established with the goal of promoting excellence in education, PUCIT has become a hub for innovation, research, and technological advancements. As a part of the prestigious University of the Punjab, PUCIT ensures that students receive top-quality education, guided by experienced faculty members.
+        </p>
+        <p>
+            To make academic life easier for students, the <strong>PUCIT GPA calculator</strong> is designed to help calculate your Grade Point Average quickly and efficiently. Whether you’re trying to keep track of your grades or planning your future courses, this tool can assist you in making informed academic decisions. For those from other universities, the <strong>PU GPA calculator</strong> can also be helpful for understanding how your grades would translate within the PUCIT system. Keep track of your academic performance and stay ahead with the <strong>PUCIT GPA calculator</strong>.
+        </p>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore Our Websites</h3>
+                <ul>
+                    <li><a href="https://smmrival.com" target="_blank">SMM Rival</a> - Social Media Marketing Panel</li>
+                    <li><a href="https://expandorbit.com" target="_blank">Expand Orbit</a> - Blogging Website</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Website Overview</h3>
+                <p><strong>Name:</strong> SMM Rival</p>
+                <p><strong>URL:</strong> <a href="https://smmrival.com" target="_blank">smmrival.com</a></p>
+                <p>SMM Rival is a leading social media marketing (SMM) panel in Pakistan. We provide affordable and reliable services to help businesses grow their social media presence. We deliver real results at competitive prices, helping you boost your online visibility effectively.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SMM Rival. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="pucit gpa calculator.js"></script>
+</body>
+</html>
